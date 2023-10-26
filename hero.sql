@@ -157,4 +157,12 @@ VALUES
 
 --3. Add column price
  ALTER TABLE item_table
- ADD item_price DECIMAL(10,2); 
+ ADD item_price DECIMAL(10,2);
+
+ --4. Update and delete
+ update hero
+ set is_active = false
+ where hero_id = 1;
+
+ delete from hero_item
+ where hero_id = 1

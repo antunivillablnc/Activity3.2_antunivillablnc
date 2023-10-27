@@ -166,3 +166,9 @@ VALUES
 
  delete from hero_item
  where hero_id = 1
+
+ --5 select-active-players
+SELECT P.player_name, H.hero_name
+FROM public.player AS P
+INNER JOIN public.hero AS H ON P.hero_id = H.hero_id
+WHERE H.is_active = true;
